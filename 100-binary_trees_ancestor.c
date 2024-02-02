@@ -15,6 +15,8 @@ binary_tree_t *binary_trees_ancestor(
 {
 	if (first == second->parent)
 		return ((binary_tree_t *) first);
+	if (second == first->parent)
+		return ((binary_tree_t *) second);
 	while (first->parent)
 	{
 		while (second->parent)
